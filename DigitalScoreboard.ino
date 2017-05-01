@@ -2,9 +2,22 @@
 LedControl lc1 = LedControl(10, 9, 8, 1);
 LedControl lc2 = LedControl(13, 12, 11, 1);
 
-const int buttonPin = 2;
-int buttonState = 0;
-boolean buttonPressed = false;
+const int buttonPin1 = 2;
+const int buttonPin2 = 3;
+const int speakerPin = 5;
+const int lightPin1 = 0;
+const int lightPin2 = 1;
+
+int buttonState1 = 0;
+int buttonState2 = 0;
+int buttonPressed1 = 0;
+int buttonPressed2 = 0;
+
+int lightState1 = 0;
+int lightState2 = 0;
+int lightTriggered1 = 0;
+int lightTriggered2 = 0;
+const int lightThreshhold = 500;
 
 int score1 = 0;
 int score2 = 0;
@@ -26,7 +39,6 @@ int lastScore2 = score2;
 #define  R     0
 
 // Set up speaker on a PWM pin (digital 9, 10 or 11)
-const int speakerOut = 6;
 const int melody[] = {  C,  b,  g,  C,  b,   e,  R,  C,  c,  g, a, C };
 const int beats[]  = { 16, 16, 16,  8,  8,  16, 32, 16, 16, 16, 8, 8 };
 const int MAX_COUNT = sizeof(melody) / 2; // Melody length, for looping.
@@ -144,8 +156,9 @@ const int Numbers[11][8][8] = {
 };
 
 void setup() {
-  pinMode(buttonPin, INPUT);
-  pinMode(speakerOut, OUTPUT);
+  pinMode(buttonPin1, INPUT);
+  pinMode(buttonPin2, INPUT);
+  pinMode(speakerPin, OUTPUT);
   // The MAX72XX is in power-saving mode on startup
   // we have to do a wakeup call
   lc1.shutdown(0, false);
@@ -174,9 +187,9 @@ void playTone() {
   if (tone_ > 0) {
     //  played less long than 'duration', pulse speaker HIGH and LOW
     while (elapsed_time < duration) {
-      digitalWrite(speakerOut, HIGH);
+      digitalWrite(speakerPin, HIGH);
       delayMicroseconds(tone_ / 2);
-      digitalWrite(speakerOut, LOW);
+      digitalWrite(speakerPin, LOW);
       delayMicroseconds(tone_ / 2);
       // Keep track of how long we pulsed
       elapsed_time += (tone_);
@@ -201,17 +214,56 @@ void playMelody() {
 }
 
 void loop() {
-  buttonState = digitalRead(buttonPin);
-  if (buttonState == HIGH) {
-    if (buttonPressed == false) {
+  buttonState1 = digitalRead(buttonPin1);
+  if (buttonState1 == HIGH) {
+    if (buttonPressed1 == 0) {
       if (score1 < 10) {
         score1 += 1;
         playMelody();
       }
-      buttonPressed = true;
+      buttonPressed1 = 1;
     }
   } else {
-    buttonPressed = false;
+    buttonPressed1 = 0;
+  }
+
+  buttonState2 = digitalRead(buttonPin2);
+  if (buttonState2 == HIGH) {
+    if (buttonPressed2 == 0) {
+      if (score2 < 10) {
+        score2 += 1;
+        playMelody();
+      }
+      buttonPressed2 = 1;
+    }
+  } else {
+    buttonPressed2 = 0;
+  }
+
+  lightState1 = analogRead(lightPin1);
+  if (lightState1 > lightThreshhold) {
+    if (lightTriggered1 == 0) {
+      if (score1 < 10) {
+        score1 += 1;
+        playMelody();
+      }
+      lightTriggered1 = 1;
+    }
+  } else {
+    lightTriggered1 = 0;
+  }
+
+  lightState2 = analogRead(lightPin2);
+  if (lightState2 > lightThreshhold) {
+    if (lightTriggered2 == 0) {
+      if (score2 < 10) {
+        score2 += 1;
+        playMelody();
+      }
+      lightTriggered2 = 1;
+    }
+  } else {
+    lightTriggered2 = 0;
   }
 
   if (lastScore1 != score1) {
