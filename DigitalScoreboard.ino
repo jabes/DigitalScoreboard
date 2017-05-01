@@ -52,28 +52,6 @@ int tone_ = 0;
 int beat = 0;
 long duration  = 0;
 
-const int Numbers[11][8][8] = {
-  {
-  }, {
-  }, {
-  }, {
-  }, {
-
-  }, {
-
-  }, {
-
-  }, {
-
-  }, {
-
-  }, {
-
-  }, {
-
-  }
-};
-
 void setup() {
   pinMode(buttonPin1, INPUT);
   pinMode(buttonPin2, INPUT);
@@ -118,267 +96,267 @@ void setNumber(LedControl lc, int num) {
 
 void setNumber0(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 2}, HIGH);
-    lc.setLed(0, 0, 3}, HIGH);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 0, 5}, HIGH);
-    lc.setLed(0, 1, 1}, HIGH);
-    lc.setLed(0, 1, 6}, HIGH);
-    lc.setLed(0, 2, 1}, HIGH);
-    lc.setLed(0, 2, 5}, HIGH);
-    lc.setLed(0, 2, 6}, HIGH);
-    lc.setLed(0, 3, 1}, HIGH);
-    lc.setLed(0, 3, 4}, HIGH);
-    lc.setLed(0, 3, 6}, HIGH);
-    lc.setLed(0, 4, 1}, HIGH);
-    lc.setLed(0, 4, 3}, HIGH);
-    lc.setLed(0, 4, 6}, HIGH);
-    lc.setLed(0, 5, 1}, HIGH);
-    lc.setLed(0, 5, 2}, HIGH);
-    lc.setLed(0, 5, 6}, HIGH);
-    lc.setLed(0, 6, 1}, HIGH);
-    lc.setLed(0, 6, 6}, HIGH);
-    lc.setLed(0, 7, 2}, HIGH);
-    lc.setLed(0, 7, 3}, HIGH);
-    lc.setLed(0, 7, 4}, HIGH);
-    lc.setLed(0, 7, 5}, HIGH);
+    lc.setLed(0, 0, 2, HIGH);
+    lc.setLed(0, 0, 3, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 1, 1, HIGH);
+    lc.setLed(0, 1, 6, HIGH);
+    lc.setLed(0, 2, 1, HIGH);
+    lc.setLed(0, 2, 5, HIGH);
+    lc.setLed(0, 2, 6, HIGH);
+    lc.setLed(0, 3, 1, HIGH);
+    lc.setLed(0, 3, 4, HIGH);
+    lc.setLed(0, 3, 6, HIGH);
+    lc.setLed(0, 4, 1, HIGH);
+    lc.setLed(0, 4, 3, HIGH);
+    lc.setLed(0, 4, 6, HIGH);
+    lc.setLed(0, 5, 1, HIGH);
+    lc.setLed(0, 5, 2, HIGH);
+    lc.setLed(0, 5, 6, HIGH);
+    lc.setLed(0, 6, 1, HIGH);
+    lc.setLed(0, 6, 6, HIGH);
+    lc.setLed(0, 7, 2, HIGH);
+    lc.setLed(0, 7, 3, HIGH);
+    lc.setLed(0, 7, 4, HIGH);
+    lc.setLed(0, 7, 5, HIGH);
 }
 
 void setNumber1(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 1, 3}, HIGH);
-    lc.setLed(0, 1, 4}, HIGH);
-    lc.setLed(0, 2, 2}, HIGH);
-    lc.setLed(0, 2, 4}, HIGH);
-    lc.setLed(0, 3, 4}, HIGH);
-    lc.setLed(0, 4, 4}, HIGH);
-    lc.setLed(0, 5, 4}, HIGH);
-    lc.setLed(0, 6, 4}, HIGH);
-    lc.setLed(0, 7, 2}, HIGH);
-    lc.setLed(0, 7, 3}, HIGH);
-    lc.setLed(0, 7, 4}, HIGH);
-    lc.setLed(0, 7, 5}, HIGH);
-    lc.setLed(0, 7, 6}, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 1, 3, HIGH);
+    lc.setLed(0, 1, 4, HIGH);
+    lc.setLed(0, 2, 2, HIGH);
+    lc.setLed(0, 2, 4, HIGH);
+    lc.setLed(0, 3, 4, HIGH);
+    lc.setLed(0, 4, 4, HIGH);
+    lc.setLed(0, 5, 4, HIGH);
+    lc.setLed(0, 6, 4, HIGH);
+    lc.setLed(0, 7, 2, HIGH);
+    lc.setLed(0, 7, 3, HIGH);
+    lc.setLed(0, 7, 4, HIGH);
+    lc.setLed(0, 7, 5, HIGH);
+    lc.setLed(0, 7, 6, HIGH);
 }
 
 void setNumber2(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 2}, HIGH);
-    lc.setLed(0, 0, 3}, HIGH);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 0, 5}, HIGH);
-    lc.setLed(0, 1, 1}, HIGH);
-    lc.setLed(0, 1, 6}, HIGH);
-    lc.setLed(0, 2, 6}, HIGH);
-    lc.setLed(0, 3, 6}, HIGH);
-    lc.setLed(0, 4, 3}, HIGH);
-    lc.setLed(0, 4, 4}, HIGH);
-    lc.setLed(0, 4, 5}, HIGH);
-    lc.setLed(0, 5, 2}, HIGH);
-    lc.setLed(0, 6, 1}, HIGH);
-    lc.setLed(0, 7, 1}, HIGH);
-    lc.setLed(0, 7, 2}, HIGH);
-    lc.setLed(0, 7, 3}, HIGH);
-    lc.setLed(0, 7, 4}, HIGH);
-    lc.setLed(0, 7, 5}, HIGH);
-    lc.setLed(0, 7, 6}, HIGH);
+    lc.setLed(0, 0, 2, HIGH);
+    lc.setLed(0, 0, 3, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 1, 1, HIGH);
+    lc.setLed(0, 1, 6, HIGH);
+    lc.setLed(0, 2, 6, HIGH);
+    lc.setLed(0, 3, 6, HIGH);
+    lc.setLed(0, 4, 3, HIGH);
+    lc.setLed(0, 4, 4, HIGH);
+    lc.setLed(0, 4, 5, HIGH);
+    lc.setLed(0, 5, 2, HIGH);
+    lc.setLed(0, 6, 1, HIGH);
+    lc.setLed(0, 7, 1, HIGH);
+    lc.setLed(0, 7, 2, HIGH);
+    lc.setLed(0, 7, 3, HIGH);
+    lc.setLed(0, 7, 4, HIGH);
+    lc.setLed(0, 7, 5, HIGH);
+    lc.setLed(0, 7, 6, HIGH);
 }
 
 void setNumber3(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 2}, HIGH);
-    lc.setLed(0, 0, 3}, HIGH);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 0, 5}, HIGH);
-    lc.setLed(0, 1, 1}, HIGH);
-    lc.setLed(0, 1, 6}, HIGH);
-    lc.setLed(0, 2, 6}, HIGH);
-    lc.setLed(0, 3, 4}, HIGH);
-    lc.setLed(0, 3, 5}, HIGH);
-    lc.setLed(0, 4, 6}, HIGH);
-    lc.setLed(0, 5, 6}, HIGH);
-    lc.setLed(0, 6, 1}, HIGH);
-    lc.setLed(0, 6, 6}, HIGH);
-    lc.setLed(0, 7, 2}, HIGH);
-    lc.setLed(0, 7, 3}, HIGH);
-    lc.setLed(0, 7, 4}, HIGH);
-    lc.setLed(0, 7, 5}, HIGH);
+    lc.setLed(0, 0, 2, HIGH);
+    lc.setLed(0, 0, 3, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 1, 1, HIGH);
+    lc.setLed(0, 1, 6, HIGH);
+    lc.setLed(0, 2, 6, HIGH);
+    lc.setLed(0, 3, 4, HIGH);
+    lc.setLed(0, 3, 5, HIGH);
+    lc.setLed(0, 4, 6, HIGH);
+    lc.setLed(0, 5, 6, HIGH);
+    lc.setLed(0, 6, 1, HIGH);
+    lc.setLed(0, 6, 6, HIGH);
+    lc.setLed(0, 7, 2, HIGH);
+    lc.setLed(0, 7, 3, HIGH);
+    lc.setLed(0, 7, 4, HIGH);
+    lc.setLed(0, 7, 5, HIGH);
 }
 
 void setNumber4(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 0, 5}, HIGH);
-    lc.setLed(0, 1, 3}, HIGH);
-    lc.setLed(0, 1, 5}, HIGH);
-    lc.setLed(0, 2, 2}, HIGH);
-    lc.setLed(0, 2, 5}, HIGH);
-    lc.setLed(0, 3, 1}, HIGH);
-    lc.setLed(0, 3, 5}, HIGH);
-    lc.setLed(0, 4, 1}, HIGH);
-    lc.setLed(0, 4, 2}, HIGH);
-    lc.setLed(0, 4, 3}, HIGH);
-    lc.setLed(0, 4, 4}, HIGH);
-    lc.setLed(0, 4, 5}, HIGH);
-    lc.setLed(0, 4, 6}, HIGH);
-    lc.setLed(0, 5, 5}, HIGH);
-    lc.setLed(0, 6, 5}, HIGH);
-    lc.setLed(0, 7, 5}, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 1, 3, HIGH);
+    lc.setLed(0, 1, 5, HIGH);
+    lc.setLed(0, 2, 2, HIGH);
+    lc.setLed(0, 2, 5, HIGH);
+    lc.setLed(0, 3, 1, HIGH);
+    lc.setLed(0, 3, 5, HIGH);
+    lc.setLed(0, 4, 1, HIGH);
+    lc.setLed(0, 4, 2, HIGH);
+    lc.setLed(0, 4, 3, HIGH);
+    lc.setLed(0, 4, 4, HIGH);
+    lc.setLed(0, 4, 5, HIGH);
+    lc.setLed(0, 4, 6, HIGH);
+    lc.setLed(0, 5, 5, HIGH);
+    lc.setLed(0, 6, 5, HIGH);
+    lc.setLed(0, 7, 5, HIGH);
 }
 
 void setNumber5(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 1}, HIGH);
-    lc.setLed(0, 0, 2}, HIGH);
-    lc.setLed(0, 0, 3}, HIGH);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 0, 5}, HIGH);
-    lc.setLed(0, 0, 6}, HIGH);
-    lc.setLed(0, 1, 1}, HIGH);
-    lc.setLed(0, 2, 1}, HIGH);
-    lc.setLed(0, 3, 2}, HIGH);
-    lc.setLed(0, 3, 3}, HIGH);
-    lc.setLed(0, 3, 4}, HIGH);
-    lc.setLed(0, 3, 5}, HIGH);
-    lc.setLed(0, 4, 6}, HIGH);
-    lc.setLed(0, 5, 6}, HIGH);
-    lc.setLed(0, 6, 1}, HIGH);
-    lc.setLed(0, 6, 6}, HIGH);
-    lc.setLed(0, 7, 2}, HIGH);
-    lc.setLed(0, 7, 3}, HIGH);
-    lc.setLed(0, 7, 4}, HIGH);
-    lc.setLed(0, 7, 5}, HIGH);
+    lc.setLed(0, 0, 1, HIGH);
+    lc.setLed(0, 0, 2, HIGH);
+    lc.setLed(0, 0, 3, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 0, 6, HIGH);
+    lc.setLed(0, 1, 1, HIGH);
+    lc.setLed(0, 2, 1, HIGH);
+    lc.setLed(0, 3, 2, HIGH);
+    lc.setLed(0, 3, 3, HIGH);
+    lc.setLed(0, 3, 4, HIGH);
+    lc.setLed(0, 3, 5, HIGH);
+    lc.setLed(0, 4, 6, HIGH);
+    lc.setLed(0, 5, 6, HIGH);
+    lc.setLed(0, 6, 1, HIGH);
+    lc.setLed(0, 6, 6, HIGH);
+    lc.setLed(0, 7, 2, HIGH);
+    lc.setLed(0, 7, 3, HIGH);
+    lc.setLed(0, 7, 4, HIGH);
+    lc.setLed(0, 7, 5, HIGH);
 }
 
 void setNumber6(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 2}, HIGH);
-    lc.setLed(0, 0, 3}, HIGH);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 0, 5}, HIGH);
-    lc.setLed(0, 1, 1}, HIGH);
-    lc.setLed(0, 1, 6}, HIGH);
-    lc.setLed(0, 2, 1}, HIGH);
-    lc.setLed(0, 3, 1}, HIGH);
-    lc.setLed(0, 3, 3}, HIGH);
-    lc.setLed(0, 3, 4}, HIGH);
-    lc.setLed(0, 3, 5}, HIGH);
-    lc.setLed(0, 4, 1}, HIGH);
-    lc.setLed(0, 4, 2}, HIGH);
-    lc.setLed(0, 4, 6}, HIGH);
-    lc.setLed(0, 5, 1}, HIGH);
-    lc.setLed(0, 5, 6}, HIGH);
-    lc.setLed(0, 6, 1}, HIGH);
-    lc.setLed(0, 6, 6}, HIGH);
-    lc.setLed(0, 7, 2}, HIGH);
-    lc.setLed(0, 7, 3}, HIGH);
-    lc.setLed(0, 7, 4}, HIGH);
-    lc.setLed(0, 7, 5}, HIGH);
+    lc.setLed(0, 0, 2, HIGH);
+    lc.setLed(0, 0, 3, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 1, 1, HIGH);
+    lc.setLed(0, 1, 6, HIGH);
+    lc.setLed(0, 2, 1, HIGH);
+    lc.setLed(0, 3, 1, HIGH);
+    lc.setLed(0, 3, 3, HIGH);
+    lc.setLed(0, 3, 4, HIGH);
+    lc.setLed(0, 3, 5, HIGH);
+    lc.setLed(0, 4, 1, HIGH);
+    lc.setLed(0, 4, 2, HIGH);
+    lc.setLed(0, 4, 6, HIGH);
+    lc.setLed(0, 5, 1, HIGH);
+    lc.setLed(0, 5, 6, HIGH);
+    lc.setLed(0, 6, 1, HIGH);
+    lc.setLed(0, 6, 6, HIGH);
+    lc.setLed(0, 7, 2, HIGH);
+    lc.setLed(0, 7, 3, HIGH);
+    lc.setLed(0, 7, 4, HIGH);
+    lc.setLed(0, 7, 5, HIGH);
 }
 
 void setNumber7(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 1}, HIGH);
-    lc.setLed(0, 0, 2}, HIGH);
-    lc.setLed(0, 0, 3}, HIGH);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 0, 5}, HIGH);
-    lc.setLed(0, 0, 6}, HIGH);
-    lc.setLed(0, 1, 6}, HIGH);
-    lc.setLed(0, 2, 6}, HIGH);
-    lc.setLed(0, 3, 2}, HIGH);
-    lc.setLed(0, 3, 3}, HIGH);
-    lc.setLed(0, 3, 4}, HIGH);
-    lc.setLed(0, 3, 5}, HIGH);
-    lc.setLed(0, 3, 6}, HIGH);
-    lc.setLed(0, 4, 5}, HIGH);
-    lc.setLed(0, 5, 4}, HIGH);
-    lc.setLed(0, 6, 3}, HIGH);
-    lc.setLed(0, 7, 2}, HIGH);
+    lc.setLed(0, 0, 1, HIGH);
+    lc.setLed(0, 0, 2, HIGH);
+    lc.setLed(0, 0, 3, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 0, 6, HIGH);
+    lc.setLed(0, 1, 6, HIGH);
+    lc.setLed(0, 2, 6, HIGH);
+    lc.setLed(0, 3, 2, HIGH);
+    lc.setLed(0, 3, 3, HIGH);
+    lc.setLed(0, 3, 4, HIGH);
+    lc.setLed(0, 3, 5, HIGH);
+    lc.setLed(0, 3, 6, HIGH);
+    lc.setLed(0, 4, 5, HIGH);
+    lc.setLed(0, 5, 4, HIGH);
+    lc.setLed(0, 6, 3, HIGH);
+    lc.setLed(0, 7, 2, HIGH);
 }
 
 void setNumber8(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 2}, HIGH);
-    lc.setLed(0, 0, 3}, HIGH);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 0, 5}, HIGH);
-    lc.setLed(0, 1, 1}, HIGH);
-    lc.setLed(0, 1, 6}, HIGH);
-    lc.setLed(0, 2, 1}, HIGH);
-    lc.setLed(0, 2, 6}, HIGH);
-    lc.setLed(0, 3, 2}, HIGH);
-    lc.setLed(0, 3, 3}, HIGH);
-    lc.setLed(0, 3, 4}, HIGH);
-    lc.setLed(0, 3, 5}, HIGH);
-    lc.setLed(0, 4, 1}, HIGH);
-    lc.setLed(0, 4, 6}, HIGH);
-    lc.setLed(0, 5, 1}, HIGH);
-    lc.setLed(0, 5, 6}, HIGH);
-    lc.setLed(0, 6, 1}, HIGH);
-    lc.setLed(0, 6, 6}, HIGH);
-    lc.setLed(0, 7, 2}, HIGH);
-    lc.setLed(0, 7, 3}, HIGH);
-    lc.setLed(0, 7, 4}, HIGH);
-    lc.setLed(0, 7, 5}, HIGH);
+    lc.setLed(0, 0, 2, HIGH);
+    lc.setLed(0, 0, 3, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 1, 1, HIGH);
+    lc.setLed(0, 1, 6, HIGH);
+    lc.setLed(0, 2, 1, HIGH);
+    lc.setLed(0, 2, 6, HIGH);
+    lc.setLed(0, 3, 2, HIGH);
+    lc.setLed(0, 3, 3, HIGH);
+    lc.setLed(0, 3, 4, HIGH);
+    lc.setLed(0, 3, 5, HIGH);
+    lc.setLed(0, 4, 1, HIGH);
+    lc.setLed(0, 4, 6, HIGH);
+    lc.setLed(0, 5, 1, HIGH);
+    lc.setLed(0, 5, 6, HIGH);
+    lc.setLed(0, 6, 1, HIGH);
+    lc.setLed(0, 6, 6, HIGH);
+    lc.setLed(0, 7, 2, HIGH);
+    lc.setLed(0, 7, 3, HIGH);
+    lc.setLed(0, 7, 4, HIGH);
+    lc.setLed(0, 7, 5, HIGH);
 }
 
 void setNumber9(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 2}, HIGH);
-    lc.setLed(0, 0, 3}, HIGH);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 0, 5}, HIGH);
-    lc.setLed(0, 1, 1}, HIGH);
-    lc.setLed(0, 1, 6}, HIGH);
-    lc.setLed(0, 2, 1}, HIGH);
-    lc.setLed(0, 2, 6}, HIGH);
-    lc.setLed(0, 3, 2}, HIGH);
-    lc.setLed(0, 3, 3}, HIGH);
-    lc.setLed(0, 3, 4}, HIGH);
-    lc.setLed(0, 3, 5}, HIGH);
-    lc.setLed(0, 3, 6}, HIGH);
-    lc.setLed(0, 4, 5}, HIGH);
-    lc.setLed(0, 5, 4}, HIGH);
-    lc.setLed(0, 6, 3}, HIGH);
-    lc.setLed(0, 7, 2}, HIGH);
+    lc.setLed(0, 0, 2, HIGH);
+    lc.setLed(0, 0, 3, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 1, 1, HIGH);
+    lc.setLed(0, 1, 6, HIGH);
+    lc.setLed(0, 2, 1, HIGH);
+    lc.setLed(0, 2, 6, HIGH);
+    lc.setLed(0, 3, 2, HIGH);
+    lc.setLed(0, 3, 3, HIGH);
+    lc.setLed(0, 3, 4, HIGH);
+    lc.setLed(0, 3, 5, HIGH);
+    lc.setLed(0, 3, 6, HIGH);
+    lc.setLed(0, 4, 5, HIGH);
+    lc.setLed(0, 5, 4, HIGH);
+    lc.setLed(0, 6, 3, HIGH);
+    lc.setLed(0, 7, 2, HIGH);
 }
 
 void setNumber10(LedControl lc) {
     lc.clearDisplay(0);
-    lc.setLed(0, 0, 0}, HIGH);
-    lc.setLed(0, 0, 3}, HIGH);
-    lc.setLed(0, 0, 4}, HIGH);
-    lc.setLed(0, 0, 5}, HIGH);
-    lc.setLed(0, 0, 6}, HIGH);
-    lc.setLed(0, 1, 0}, HIGH);
-    lc.setLed(0, 1, 2}, HIGH);
-    lc.setLed(0, 1, 7}, HIGH);
-    lc.setLed(0, 2, 0}, HIGH);
-    lc.setLed(0, 2, 2}, HIGH);
-    lc.setLed(0, 2, 6}, HIGH);
-    lc.setLed(0, 2, 7}, HIGH);
-    lc.setLed(0, 3, 0}, HIGH);
-    lc.setLed(0, 3, 2}, HIGH);
-    lc.setLed(0, 3, 5}, HIGH);
-    lc.setLed(0, 3, 7}, HIGH);
-    lc.setLed(0, 4, 0}, HIGH);
-    lc.setLed(0, 4, 2}, HIGH);
-    lc.setLed(0, 4, 4}, HIGH);
-    lc.setLed(0, 4, 7}, HIGH);
-    lc.setLed(0, 5, 0}, HIGH);
-    lc.setLed(0, 5, 2}, HIGH);
-    lc.setLed(0, 5, 3}, HIGH);
-    lc.setLed(0, 5, 7}, HIGH);
-    lc.setLed(0, 6, 0}, HIGH);
-    lc.setLed(0, 6, 2}, HIGH);
-    lc.setLed(0, 6, 7}, HIGH);
-    lc.setLed(0, 7, 0}, HIGH);
-    lc.setLed(0, 7, 3}, HIGH);
-    lc.setLed(0, 7, 4}, HIGH);
-    lc.setLed(0, 7, 5}, HIGH);
-    lc.setLed(0, 7, 6}, HIGH);
+    lc.setLed(0, 0, 0, HIGH);
+    lc.setLed(0, 0, 3, HIGH);
+    lc.setLed(0, 0, 4, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 0, 6, HIGH);
+    lc.setLed(0, 1, 0, HIGH);
+    lc.setLed(0, 1, 2, HIGH);
+    lc.setLed(0, 1, 7, HIGH);
+    lc.setLed(0, 2, 0, HIGH);
+    lc.setLed(0, 2, 2, HIGH);
+    lc.setLed(0, 2, 6, HIGH);
+    lc.setLed(0, 2, 7, HIGH);
+    lc.setLed(0, 3, 0, HIGH);
+    lc.setLed(0, 3, 2, HIGH);
+    lc.setLed(0, 3, 5, HIGH);
+    lc.setLed(0, 3, 7, HIGH);
+    lc.setLed(0, 4, 0, HIGH);
+    lc.setLed(0, 4, 2, HIGH);
+    lc.setLed(0, 4, 4, HIGH);
+    lc.setLed(0, 4, 7, HIGH);
+    lc.setLed(0, 5, 0, HIGH);
+    lc.setLed(0, 5, 2, HIGH);
+    lc.setLed(0, 5, 3, HIGH);
+    lc.setLed(0, 5, 7, HIGH);
+    lc.setLed(0, 6, 0, HIGH);
+    lc.setLed(0, 6, 2, HIGH);
+    lc.setLed(0, 6, 7, HIGH);
+    lc.setLed(0, 7, 0, HIGH);
+    lc.setLed(0, 7, 3, HIGH);
+    lc.setLed(0, 7, 4, HIGH);
+    lc.setLed(0, 7, 5, HIGH);
+    lc.setLed(0, 7, 6, HIGH);
 }
 
 void playTone() {
