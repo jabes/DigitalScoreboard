@@ -64,37 +64,37 @@ void setup() {
   lc2.setIntensity(0, 8);
   lc1.clearDisplay(0);
   lc2.clearDisplay(0);
-  setNumber(lc1, score1);
-  setNumber(lc2, score2);
+  drawNumber(lc1, score1);
+  drawNumber(lc2, score2);
 }
 
-void setNumber(LedControl lc, int num) {
+void drawNumber(LedControl lc, int num) {
   if (num == 0) {
-    setNumber0(lc);
+    drawNumber0(lc);
   } else if (num == 1) {
-      setNumber1(lc);
+    drawNumber1(lc);
   } else if (num == 2) {
-    setNumber2(lc);
+    drawNumber2(lc);
   } else if (num == 3) {
-    setNumber3(lc);
+    drawNumber3(lc);
   } else if (num == 4) {
-    setNumber4(lc);
+    drawNumber4(lc);
   } else if (num == 5) {
-    setNumber5(lc);
+    drawNumber5(lc);
   } else if (num == 6) {
-    setNumber6(lc);
+    drawNumber6(lc);
   } else if (num == 7) {
-    setNumber7(lc);
+    drawNumber7(lc);
   } else if (num == 8) {
-    setNumber8(lc);
+    drawNumber8(lc);
   } else if (num == 9) {
-    setNumber9(lc);
+    drawNumber9(lc);
   } else if (num == 10) {
-    setNumber10(lc);
+    drawNumber10(lc);
   }
 }
 
-void setNumber0(LedControl lc) {
+void drawNumber0(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 2, HIGH);
     lc.setLed(0, 0, 3, HIGH);
@@ -122,7 +122,7 @@ void setNumber0(LedControl lc) {
     lc.setLed(0, 7, 5, HIGH);
 }
 
-void setNumber1(LedControl lc) {
+void drawNumber1(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 4, HIGH);
     lc.setLed(0, 1, 3, HIGH);
@@ -140,7 +140,7 @@ void setNumber1(LedControl lc) {
     lc.setLed(0, 7, 6, HIGH);
 }
 
-void setNumber2(LedControl lc) {
+void drawNumber2(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 2, HIGH);
     lc.setLed(0, 0, 3, HIGH);
@@ -163,7 +163,7 @@ void setNumber2(LedControl lc) {
     lc.setLed(0, 7, 6, HIGH);
 }
 
-void setNumber3(LedControl lc) {
+void drawNumber3(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 2, HIGH);
     lc.setLed(0, 0, 3, HIGH);
@@ -184,7 +184,7 @@ void setNumber3(LedControl lc) {
     lc.setLed(0, 7, 5, HIGH);
 }
 
-void setNumber4(LedControl lc) {
+void drawNumber4(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 4, HIGH);
     lc.setLed(0, 0, 5, HIGH);
@@ -205,7 +205,7 @@ void setNumber4(LedControl lc) {
     lc.setLed(0, 7, 5, HIGH);
 }
 
-void setNumber5(LedControl lc) {
+void drawNumber5(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 1, HIGH);
     lc.setLed(0, 0, 2, HIGH);
@@ -229,7 +229,7 @@ void setNumber5(LedControl lc) {
     lc.setLed(0, 7, 5, HIGH);
 }
 
-void setNumber6(LedControl lc) {
+void drawNumber6(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 2, HIGH);
     lc.setLed(0, 0, 3, HIGH);
@@ -255,7 +255,7 @@ void setNumber6(LedControl lc) {
     lc.setLed(0, 7, 5, HIGH);
 }
 
-void setNumber7(LedControl lc) {
+void drawNumber7(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 1, HIGH);
     lc.setLed(0, 0, 2, HIGH);
@@ -276,7 +276,7 @@ void setNumber7(LedControl lc) {
     lc.setLed(0, 7, 2, HIGH);
 }
 
-void setNumber8(LedControl lc) {
+void drawNumber8(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 2, HIGH);
     lc.setLed(0, 0, 3, HIGH);
@@ -302,7 +302,7 @@ void setNumber8(LedControl lc) {
     lc.setLed(0, 7, 5, HIGH);
 }
 
-void setNumber9(LedControl lc) {
+void drawNumber9(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 2, HIGH);
     lc.setLed(0, 0, 3, HIGH);
@@ -323,7 +323,7 @@ void setNumber9(LedControl lc) {
     lc.setLed(0, 7, 2, HIGH);
 }
 
-void setNumber10(LedControl lc) {
+void drawNumber10(LedControl lc) {
     lc.clearDisplay(0);
     lc.setLed(0, 0, 0, HIGH);
     lc.setLed(0, 0, 3, HIGH);
@@ -357,6 +357,50 @@ void setNumber10(LedControl lc) {
     lc.setLed(0, 7, 4, HIGH);
     lc.setLed(0, 7, 5, HIGH);
     lc.setLed(0, 7, 6, HIGH);
+}
+
+void drawSadFace(LedControl lc) {
+    lc.clearDisplay(0);
+    lc.setLed(0, 0, 1, HIGH);
+    lc.setLed(0, 0, 2, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 0, 6, HIGH);
+    lc.setLed(0, 1, 1, HIGH);
+    lc.setLed(0, 1, 2, HIGH);
+    lc.setLed(0, 1, 5, HIGH);
+    lc.setLed(0, 1, 6, HIGH);
+    lc.setLed(0, 4, 2, HIGH);
+    lc.setLed(0, 4, 3, HIGH);
+    lc.setLed(0, 4, 4, HIGH);
+    lc.setLed(0, 4, 5, HIGH);
+    lc.setLed(0, 5, 1, HIGH);
+    lc.setLed(0, 5, 6, HIGH);
+    lc.setLed(0, 6, 0, HIGH);
+    lc.setLed(0, 6, 7, HIGH);
+    lc.setLed(0, 7, 0, HIGH);
+    lc.setLed(0, 7, 7, HIGH);
+}
+
+void drawHappyFace(LedControl lc) {
+    lc.clearDisplay(0);
+    lc.setLed(0, 0, 1, HIGH);
+    lc.setLed(0, 0, 2, HIGH);
+    lc.setLed(0, 0, 5, HIGH);
+    lc.setLed(0, 0, 6, HIGH);
+    lc.setLed(0, 1, 1, HIGH);
+    lc.setLed(0, 1, 2, HIGH);
+    lc.setLed(0, 1, 5, HIGH);
+    lc.setLed(0, 1, 6, HIGH);
+    lc.setLed(0, 4, 0, HIGH);
+    lc.setLed(0, 4, 7, HIGH);
+    lc.setLed(0, 5, 0, HIGH);
+    lc.setLed(0, 5, 7, HIGH);
+    lc.setLed(0, 6, 1, HIGH);
+    lc.setLed(0, 6, 6, HIGH);
+    lc.setLed(0, 7, 2, HIGH);
+    lc.setLed(0, 7, 3, HIGH);
+    lc.setLed(0, 7, 4, HIGH);
+    lc.setLed(0, 7, 5, HIGH);
 }
 
 void playTone() {
@@ -398,6 +442,9 @@ void loop() {
       if (score1 < 10) {
         score1 += 1;
         playMelody();
+      } else {
+        drawHappyFace(lc1);
+        drawSadFace(lc2);
       }
       buttonPressed1 = 1;
     }
@@ -411,6 +458,9 @@ void loop() {
       if (score2 < 10) {
         score2 += 1;
         playMelody();
+      } else {
+         drawHappyFace(lc2);
+         drawSadFace(lc1);
       }
       buttonPressed2 = 1;
     }
@@ -424,6 +474,9 @@ void loop() {
       if (score1 < 10) {
         score1 += 1;
         playMelody();
+      } else {
+        drawHappyFace(lc1);
+        drawSadFace(lc2);
       }
       lightTriggered1 = 1;
     }
@@ -437,6 +490,9 @@ void loop() {
       if (score2 < 10) {
         score2 += 1;
         playMelody();
+      } else {
+        drawHappyFace(lc2);
+        drawSadFace(lc1);
       }
       lightTriggered2 = 1;
     }
@@ -445,11 +501,11 @@ void loop() {
   }
 
   if (lastScore1 != score1) {
-    setNumber(lc1, score1);
+    drawNumber(lc1, score1);
   }
 
   if (lastScore2 != score2) {
-    setNumber(lc2, score2);
+    drawNumber(lc2, score2);
   }
 
   lastScore1 = score1;
