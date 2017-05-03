@@ -9,23 +9,12 @@ void playTone(int tone, int duration) {
   }
 }
 
-void playNote(int note, int duration) {
-  char names[] = { 'c', 'd', 'e', 'f', 'g', 'a', 'b', 'C' };
-  int tones[] = { 1915, 1700, 1519, 1432, 1275, 1136, 1014, 956 };
-  // play the tone corresponding to the note name
-  for (int i = 0; i < 8; i++) {
-    if (names[i] == note) {
-      playTone(tones[i], duration);
-    }
-  }
-}
-
-void playMelody(char notes[], int beats[], int length, int tempo) {
+void playMelody(int notes[], int beats[], int length, int tempo) {
   for (int i = 0; i < length; i++) {
-    if (notes[i] == ' ') {
+    if (notes[i] == 0) {
       delay(beats[i] * tempo); // rest
     } else {
-      playNote(notes[i], beats[i] * tempo);
+      playTone(notes[i], beats[i] * tempo);
     }
     // pause between notes
     delay(tempo / 2);
@@ -33,25 +22,25 @@ void playMelody(char notes[], int beats[], int length, int tempo) {
 }
 
 void playGameStartMelody() {
-  char notes[] = "ccggaag ffeeddc"; // a space represents a rest
-  int beats[] = { 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 3 };
+  int notes[] = { NOTE_E7, NOTE_E7, 0, NOTE_E7, 0, NOTE_C7, NOTE_E7, 0, NOTE_G7, 0, 0, 0, NOTE_G6, 0, 0, 0 };
+  int beats[] = {       1,       1, 1,       1, 1,       1,       1, 1,       1, 1, 1, 1,       1, 1, 1, 1 };
   int length = sizeof(beats) / 2;
-  int tempo = 200;
+  int tempo = 100;
   playMelody(notes, beats, length, tempo);
 }
 
 void playGameEndMelody() {
-  char notes[] = "ccggaag ffeeddc"; // a space represents a rest
-  int beats[] = { 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 3 };
+  int notes[] = { NOTE_C6, NOTE_C6, NOTE_C6, NOTE_C7, 0, NOTE_G7, 0, NOTE_A7, 0, NOTE_B6, 0, NOTE_A6, NOTE_B6 };
+  int beats[] = {       1,       1,       1,       3, 1,       3, 1,       2, 1,       1, 1,       1,       3 };
   int length = sizeof(beats) / 2;
-  int tempo = 200;
+  int tempo = 100;
   playMelody(notes, beats, length, tempo);
 }
 
 void playGameScoreMelody() {
-  char notes[] = "cdefgabC"; // a space represents a rest
-  int beats[] = { 1, 1, 1, 1, 1, 1, 1, 1 };
+  int notes[] = { NOTE_B6, NOTE_A6, NOTE_G6, NOTE_F6, NOTE_E6, NOTE_D6, NOTE_C6 };
+  int beats[] = {       1,       1,       1,       1,       1,       1,       1 };
   int length = sizeof(beats) / 2;
-  int tempo = 100;
+  int tempo = 80;
   playMelody(notes, beats, length, tempo);
 }

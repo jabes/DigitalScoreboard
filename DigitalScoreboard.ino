@@ -55,17 +55,18 @@ void reset() {
 }
 
 void loop() {
-  if (gameOn) {
 
-    buttonState = digitalRead(buttonPin);
-    if (buttonState == HIGH) {
-      if (buttonPressed == false) {
-        reset();
-        buttonPressed = true;
-      }
-    } else {
-      buttonPressed = false;
+  buttonState = digitalRead(buttonPin);
+  if (buttonState == HIGH) {
+    if (buttonPressed == false) {
+      reset();
+      buttonPressed = true;
     }
+  } else {
+    buttonPressed = false;
+  }
+
+  if (gameOn) {
 
     lightState1 = analogRead(lightPin1);
     if (lightState1 > lightThreshhold) {
@@ -92,23 +93,25 @@ void loop() {
     }
 
     if (lastScore1 != score1) {
+      drawNumber(lc1, score1);
       if (score1 == 10) {
         win1 = true;
         gameOn = false;
+        playGameEndMelody();
       } else {
         playGameScoreMelody();
       }
-      drawNumber(lc1, score1);
     }
 
     if (lastScore2 != score2) {
+      drawNumber(lc2, score2);
       if (score2 == 10) {
         win2 = true;
         gameOn = false;
+        playGameEndMelody();
       } else {
         playGameScoreMelody();
       }
-      drawNumber(lc2, score2);
     }
 
     lastScore1 = score1;
@@ -118,27 +121,27 @@ void loop() {
 
     if (win1 == true) {
 
-      if (blinkState == 0) {
+      if (blinkState == 1) {
         drawNumber(lc1, score1);
         drawNumber(lc2, score2);
-        blinkState = 1;
+        blinkState = 0;
       } else {
         drawHappyFace(lc1);
         drawSadFace(lc2);
-        blinkState = 0;
+        blinkState = 1;
       }
       delay(1000);
 
     } else if (win2 == true) {
 
-      if (blinkState == 0) {
+      if (blinkState == 1) {
         drawNumber(lc2, score2);
         drawNumber(lc1, score1);
-        blinkState = 1;
+        blinkState = 0;
       } else {
         drawHappyFace(lc2);
         drawSadFace(lc1);
-        blinkState = 0;
+        blinkState = 1;
       }
       delay(1000);
 
