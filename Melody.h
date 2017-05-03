@@ -8,6 +8,9 @@
 
 void playTone(int tone, int duration);
 void playNote(int note, int duration);
-void playMelody();
+
+void playGameStartMelody();
+void playGameEndMelody();
+void playGameScoreMelody();
 
 #endif
